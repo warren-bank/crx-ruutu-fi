@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         Ruutu
 // @description  Watch videos in external player.
-// @version      1.0.1
+// @version      1.0.2
+// @include      /^https?:\/\/(?:[^\.\/]*\.)*ruutu\.fi\/.*$/
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*ruutu\.fi\/video\/.+$/
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*nelonenmedia\.fi\/player\/misc\/embed_player\.html\?nid=.+$/
 // @icon         https://www.ruutu.fi/favicon.ico
@@ -277,11 +278,11 @@ var process_mp4_url = function(video_url, caption_url, referer_url) {
 
 // ----------------------------------------------------------------------------- process video
 
-var get_video_id = function() {
+var get_video_id = function(url) {
   var url_regex, url_matches
 
   url_regex   = /^https?:\/\/(?:[^\.\/]*\.)*(?:ruutu\.fi\/video\/|nelonenmedia\.fi\/player\/misc\/embed_player\.html\?nid=)([^\/&]+)(?:[\/&].*)?$/i
-  url_matches = url_regex.exec(unsafeWindow.location.href)
+  url_matches = url_regex.exec(url)
 
   return url_matches ? url_matches[1] : null
 }
@@ -298,6 +299,47 @@ var process_video_id = function(video_id, callback) {
 
 // ----------------------------------------------------------------------------- bootstrap
 
-process_video_id(
-  get_video_id()
-)
+var init = function() {
+  // on page load
+  process_site_url(unsafeWindow.location.href)
+
+  if (unsafeWindow.history) {
+    var real = {
+      pushState:    unsafeWindow.history.pushState,
+      replaceState: unsafeWindow.history.replaceState
+    }
+
+    unsafeWindow.history.pushState = function(state, title, url) {
+      process_site_url(url)
+      real.pushState.apply(unsafeWindow.history, [state, title, url])
+    }
+
+    unsafeWindow.history.replaceState = function(state, title, url) {
+      process_site_url(url)
+      real.replaceState.apply(unsafeWindow.history, [state, title, url])
+    }
+  }
+}
+
+var process_site_url = function(url) {
+  process_video_id(
+    get_video_id(
+      resolve_url(url)
+    )
+  )
+}
+
+var resolve_url = function(url) {
+  if (url.substring(0, 4).toLowerCase() === 'http')
+    return url
+
+  if (url.substring(0, 2) === '//')
+    return unsafeWindow.location.protocol + url
+
+  if (url.substring(0, 1) === '/')
+    return unsafeWindow.location.protocol + '//' + unsafeWindow.location.host + url
+
+  return unsafeWindow.location.protocol + '//' + unsafeWindow.location.host + unsafeWindow.location.pathname.replace(/[^\/]+$/, '') + url
+}
+
+init()
