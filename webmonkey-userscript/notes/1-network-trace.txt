@@ -1,0 +1,365 @@
+--------------------------------------------------------------------------------
+
+example of free video:
+======================
+
+https://www.ruutu.fi/ohjelmat/poliisikoira-rex
+
+https://www.ruutu.fi/video/4174426
+
+view-source:https://www.ruutu.fi/video/4174426
+  "embedUrl":"https://sf.nm-ovp.nelonenmedia.fi/player/misc/embed_player.html?nid=4174426"
+
+https://sf.nm-ovp.nelonenmedia.fi/player/misc/embed_player.html?nid=4174426
+https://mcc.nm-ovp.nelonenmedia.fi/v1/media/4174426
+
+----------------------------------------
+
+curl --include "https://mcc.nm-ovp.nelonenmedia.fi/v1/media/4174426"
+
+HTTP/2 200
+content-type: application/json
+access-control-allow-origin: *
+
+{
+    "success": true,
+    "type": "video",
+    "clip": {
+        "playback": {
+            "mediaType": "video_episode",
+            "allowEmbed": false,
+            "runtime": 5142,
+            "endCredits": 5084,
+            "breaks": "00:11:04:09;00:23:20:20;00:36:30:13;00:48:55:18;01:00:29:21;01:12:58:11",
+            "geoblock": {
+                "enabled": true,
+                "url": "https://geoblock.nm-ovp.nelonenmedia.fi/geoblock"
+            },
+            "drm": {
+                "enabled": false,
+                "url": "https://mcc.nm-ovp.nelonenmedia.fi/v1/drm/video",
+                "assetId": null
+            },
+            "adErrorText": "Virhe ladattaessa mainoksia. Virhe voi johtua mainonnan esto-ohjelmasta tai mahdollisesta häiriöstä tietoliikenteessä.",
+            "media": {
+                "images": {
+                    "thumbnail": {
+                        "2560x1440": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/2560x1440/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg",
+                        "1920x1080": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/1920x1080/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg",
+                        "1280x720": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/1280x720/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg",
+                        "1024x576": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/1024x576/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg",
+                        "640x360": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/640x360/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg",
+                        "320x180": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/320x180/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg",
+                        "160x90": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/160x90/public/img/30622d04a655dd36a647c7b1af8d86609a444800-4135607_17.jpg"
+                    }
+                },
+                "streamUrls": {
+                    "android": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI",
+                        "withCredentials": false
+                    },
+                    "apple": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI",
+                        "withCredentials": false
+                    },
+                    "cast": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI",
+                        "withCredentials": false
+                    },
+                    "dash": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/manifest.mpd?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI",
+                        "withCredentials": false
+                    },
+                    "http": {
+                        "url": "https://nelonenmedia-pmd-video.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171_1000_none.mp4?hdnts=ip%3D75.163.28.208%7Est%3D1667277253%7Eexp%3D1667277553%7Eacl%3D%2F71*%7Ehmac%3Df0fc803f617f2a0593e16b893c2079cf3272356db02ac4aeae394cb64b10a7ba",
+                        "withCredentials": false
+                    },
+                    "samsung": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI",
+                        "withCredentials": false
+                    },
+                    "webHls": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI",
+                        "withCredentials": false
+                    },
+                    "audioHls": null,
+                    "audioMp3": null
+                }
+            }
+        },
+        "metadata": {
+            "parentId": 4135607,
+            "channelId": 47,
+            "channelName": "Ruutu",
+            "channelLogo": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/logo/public/img/7f7dbd175962b6ca78ed3d860e1eabfc38cf798e-1x1pngforruutuplayer.png",
+            "ageLimit": 12,
+            "ageLimitText": "12",
+            "paid": false,
+            "programName": "Poliisikoira Rex - Kausi 1 - Jakso 1",
+            "description": "Kausi 1. Jakso 1/14. Päätepysäkki Wien. Keskellä Wieniä räjähtää pommi. Richard Moserin ryhmä alkaa tutkia idänkauppaan kietoutuvaa murhavyyhtiä. Ryhmä saa apua Moserin uudelta ystävältä, nokkelalta saksanpaimenkoira Rexiltä. Saksalainen rikossarja. (85')",
+            "seriesRedirectUrl": null,
+            "seriesRedirectTitle": null,
+            "seriesRedirectImage": null,
+            "recommendationRedirectUrl": "https://ruutu.fi/video/4174426",
+            "nextInSequence": 4135609,
+            "notification": null,
+            "online_rights": [{
+                "end_date": "2022-10-07T11:00:00Z",
+                "product_id": null,
+                "device_groups": null,
+                "id": 19,
+                "type": "free",
+                "start_date": "2022-09-06T13:00:00Z"
+            }, {
+                "end_date": "2023-06-05T20:59:00Z",
+                "product_id": null,
+                "device_groups": null,
+                "id": 21119,
+                "type": "free",
+                "start_date": "2022-09-06T03:00:00Z"
+            }]
+        },
+        "passthroughVariables": {
+            "media_type": "video_episode",
+            "media_type_b": "video_episode",
+            "nid": 4174426,
+            "paid": false,
+            "channel": 47,
+            "program_name": "Poliisikoira Rex - Kausi 1 - Jakso 1 - 2022-09-06T05:56 - Poliisikoira Rex",
+            "series_id": 1377616,
+            "series_name": "Poliisikoira Rex",
+            "content_owner": "nelonenmedia",
+            "gaid": "UA-3683704-15",
+            "themes": "Jännitys,Rikos",
+            "tags": null,
+            "m4_program_id": null,
+            "m4_production_id": 15205171,
+            "fp_ch": null,
+            "fp_ty": "video_tv_program",
+            "fp_clnr": "4nelonenmedia",
+            "runtime": 5142,
+            "internal_class": 5,
+            "internal_subclass": 3
+        }
+    },
+    "freewheelAdTags": {
+        "video_asset_custom_id": "4174426",
+        "network_id": "510626",
+        "sponsored_ids": "53121,53122,53123,53124,53130",
+        "profiles": {
+            "video_ios": "510626:Nelonen_Ruutu_iOS_Live",
+            "video_android": "510626:Nelonen_Ruutu_Android_Live",
+            "video_html5": "510626:Nelonen_Web_HTML5_Live",
+            "video_tvos": "510626:Nelonen_Ruutu_tvOS_Live",
+            "video_androidtv": "510626:Nelonen_Ruutu_AndroidTV_Live",
+            "video_chromecast": "510626:Nelonen_Ruutu_Chromecast_Live",
+            "video_airplay": "510626:Nelonen_Ruutu_Airplay_Live",
+            "video_smarttv_samsung": "510626:Nelonen_Ruutu_Samsung_SmartTV_Live",
+            "video_smarttv_lg": "510626:Nelonen_Ruutu_LG_SmartTV_Live",
+            "video_smarttv_philips": "510626:Nelonen_Ruutu_Philips_SmartTV_Live",
+            "audio_ios": "510626:Nelonen_Supla_Audio_iOS_Live",
+            "audio_android": "510626:Nelonen_Supla_Audio_Android_Live",
+            "audio_html5": "510626:Nelonen_Supla_Audio_HTML5_Live",
+            "video_operator_stb": "510626:Nelonen_Ruutu_Operator_STB_Live",
+            "video_hbbtv": "510626:Nelonen_Ruutu_HBBTV_Live",
+            "video_smarttv_panasonic": "510626:Nelonen_Ruutu_Panasonic_SmartTV_Live",
+            "video_smarttv_vestel": "510626:Nelonen_Ruutu_Vestel_SmartTV_Live"
+        },
+        "server_url": "7caa2.v.fwmrm.net"
+    }
+}
+
+----------------------------------------
+
+curl -I "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/71/online/video/video_episode_115205171.smil/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjcyNzcyNTMsIm5iZiI6MTY2NzI3Njk1MywiZXhwIjoxNjY3MzYzNjUzLCJpcCI6Ijc1LjE2My4yOC4yMDgiLCJwYXRoIjoiLzcxL29ubGluZS92aWRlby92aWRlb19lcGlzb2RlXzExNTIwNTE3MS5zbWlsLyJ9.1Nkm_P7NsVm-HnIiOA1YWFvMriBRSVm9wDPagR_NKKI"
+
+HTTP/2 200
+content-type: application/vnd.apple.mpegurl
+access-control-allow-origin: *
+
+----------------------------------------
+
+summary:
+========
+data.success === true
+data.clip.metadata.paid === false
+
+--------------------------------------------------------------------------------
+
+example of paid video:
+======================
+
+https://www.ruutu.fi/ohjelmat/monroe
+
+https://www.ruutu.fi/video/4217386
+
+view-source:https://www.ruutu.fi/video/4217386
+  "embedUrl":"https://sf.nm-ovp.nelonenmedia.fi/player/misc/embed_player.html?nid=4217386"
+
+https://sf.nm-ovp.nelonenmedia.fi/player/misc/embed_player.html?nid=4217386
+https://mcc.nm-ovp.nelonenmedia.fi/v1/media/4217386
+
+----------------------------------------
+
+curl --include "https://mcc.nm-ovp.nelonenmedia.fi/v1/media/4217386"
+
+HTTP/2 403
+content-type: application/json
+access-control-allow-origin: *
+
+{
+    "success": false,
+    "type": "video",
+    "clip": {
+        "playback": {
+            "mediaType": "video_episode",
+            "allowEmbed": false,
+            "runtime": 2781,
+            "endCredits": 2751,
+            "breaks": null,
+            "geoblock": {
+                "enabled": true,
+                "url": "https://geoblock.nm-ovp.nelonenmedia.fi/geoblock"
+            },
+            "drm": {
+                "enabled": false,
+                "url": "https://mcc.nm-ovp.nelonenmedia.fi/v1/drm/video",
+                "assetId": null
+            },
+            "adErrorText": "Virhe ladattaessa mainoksia. Virhe voi johtua mainonnan esto-ohjelmasta tai mahdollisesta häiriöstä tietoliikenteessä.",
+            "media": {
+                "images": {
+                    "thumbnail": {
+                        "2560x1440": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/2560x1440/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg",
+                        "1920x1080": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/1920x1080/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg",
+                        "1280x720": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/1280x720/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg",
+                        "1024x576": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/1024x576/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg",
+                        "640x360": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/640x360/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg",
+                        "320x180": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/320x180/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg",
+                        "160x90": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/160x90/public/img/c40504aeff92fa3055c8adbe2d0780e2edb519fd-CIRK4030000015660686.jpg"
+                    }
+                },
+                "streamUrls": {
+                    "android": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/playlist.m3u8",
+                        "withCredentials": false
+                    },
+                    "apple": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/playlist.m3u8",
+                        "withCredentials": false
+                    },
+                    "cast": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/playlist.m3u8",
+                        "withCredentials": false
+                    },
+                    "dash": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/manifest.mpd",
+                        "withCredentials": false
+                    },
+                    "http": {
+                        "url": "https://nelonenmedia-pmd-video.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117_1000_none.mp4",
+                        "withCredentials": false
+                    },
+                    "samsung": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/playlist.m3u8",
+                        "withCredentials": false
+                    },
+                    "webHls": {
+                        "url": "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/playlist.m3u8",
+                        "withCredentials": false
+                    },
+                    "audioHls": null,
+                    "audioMp3": null
+                }
+            }
+        },
+        "metadata": {
+            "parentId": 4177179,
+            "channelId": 48,
+            "channelName": "VOD",
+            "channelLogo": "https://xb-static.nm-ovp.nelonenmedia.fi/xb/styles/logo/public/logo/bd437fd16814d080ea922ec19d52d0e42eeb028b-vod_logo.png",
+            "ageLimit": 12,
+            "ageLimitText": "12",
+            "paid": true,
+            "programName": "Monroe - Kausi 1 - Jakso 1",
+            "description": "Kausi 1. Jakso 1/6. Kun nuori nainen tuodaan sairaalaan aivokasvaimen kera, Monroen on autettava häntä päättämään, suostuuko hän leikkaukseen, joka voi muuttaa naista. Kykeneekö Monroe tukemaan naista, kun hänen oma elämänsä on syöksykierteessä? (46') Ohjelma kuuluu Cirkus-sarjapalveluun, jota voit katsoa Ruutu+-tilauksella.",
+            "seriesRedirectUrl": null,
+            "seriesRedirectTitle": null,
+            "seriesRedirectImage": null,
+            "recommendationRedirectUrl": "https://ruutu.fi/video/4217386",
+            "nextInSequence": 4177186,
+            "notification": null,
+            "online_rights": [{
+                "end_date": "2023-01-31T21:59:00Z",
+                "product_id": "744162",
+                "device_groups": null,
+                "id": 21,
+                "type": "paid",
+                "start_date": "2022-10-19T21:00:00Z"
+            }]
+        },
+        "passthroughVariables": {
+            "media_type": "video_episode",
+            "media_type_b": "video_episode",
+            "nid": 4217386,
+            "paid": true,
+            "channel": 48,
+            "program_name": "Monroe - Kausi 1 - Jakso 1 - 2022-10-19T23:57 - Monroe",
+            "series_id": 4150599,
+            "series_name": "Monroe",
+            "content_owner": "nelonenmedia",
+            "gaid": "UA-3683704-15",
+            "themes": "Rikos",
+            "tags": null,
+            "m4_program_id": null,
+            "m4_production_id": 15207117,
+            "fp_ch": null,
+            "fp_ty": "video_tv_program",
+            "fp_clnr": "4nelonenmedia",
+            "runtime": 2781,
+            "internal_class": 5,
+            "internal_subclass": 1
+        }
+    },
+    "freewheelAdTags": {
+        "video_asset_custom_id": "4217386",
+        "network_id": "510626",
+        "sponsored_ids": "53121,53122,53123,53124,53130",
+        "profiles": {
+            "video_ios": "510626:Nelonen_Ruutu_iOS_Live",
+            "video_android": "510626:Nelonen_Ruutu_Android_Live",
+            "video_html5": "510626:Nelonen_Web_HTML5_Live",
+            "video_tvos": "510626:Nelonen_Ruutu_tvOS_Live",
+            "video_androidtv": "510626:Nelonen_Ruutu_AndroidTV_Live",
+            "video_chromecast": "510626:Nelonen_Ruutu_Chromecast_Live",
+            "video_airplay": "510626:Nelonen_Ruutu_Airplay_Live",
+            "video_smarttv_samsung": "510626:Nelonen_Ruutu_Samsung_SmartTV_Live",
+            "video_smarttv_lg": "510626:Nelonen_Ruutu_LG_SmartTV_Live",
+            "video_smarttv_philips": "510626:Nelonen_Ruutu_Philips_SmartTV_Live",
+            "audio_ios": "510626:Nelonen_Supla_Audio_iOS_Live",
+            "audio_android": "510626:Nelonen_Supla_Audio_Android_Live",
+            "audio_html5": "510626:Nelonen_Supla_Audio_HTML5_Live",
+            "video_operator_stb": "510626:Nelonen_Ruutu_Operator_STB_Live",
+            "video_hbbtv": "510626:Nelonen_Ruutu_HBBTV_Live",
+            "video_smarttv_panasonic": "510626:Nelonen_Ruutu_Panasonic_SmartTV_Live",
+            "video_smarttv_vestel": "510626:Nelonen_Ruutu_Vestel_SmartTV_Live"
+        },
+        "server_url": "7caa2.v.fwmrm.net"
+    }
+}
+
+----------------------------------------
+
+curl -I "https://nelonenmedia-stream-video-t.nm-stream.nelonenmedia.fi/17/online/video/video_episode_115207117.smil/playlist.m3u8"
+
+HTTP/2 403
+access-control-allow-origin: *
+
+----------------------------------------
+
+summary:
+========
+data.success === false
+data.clip.metadata.paid === true
+
+--------------------------------------------------------------------------------
