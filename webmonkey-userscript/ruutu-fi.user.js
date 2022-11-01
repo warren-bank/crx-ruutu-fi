@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ruutu
 // @description  Watch videos in external player.
-// @version      1.0.0
+// @version      1.0.1
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*ruutu\.fi\/video\/.+$/
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*nelonenmedia\.fi\/player\/misc\/embed_player\.html\?nid=.+$/
 // @icon         https://www.ruutu.fi/favicon.ico
@@ -287,6 +287,9 @@ var get_video_id = function() {
 }
 
 var process_video_id = function(video_id, callback) {
+  if (!video_id)
+    return
+
   if (!callback)
     callback = process_video_url
 
